@@ -49,7 +49,7 @@ pipeline {
              //properties.load(is)
             InputStream input = null;
            //  try {
-            input = new FileInputStream("/var/lib/jenkins/workspace/Test_MQ/Test_MQ.properties");
+            input = new FileInputStream($WORKSPACE+"/Test_MQ.properties");
             prop.load(input);
             //prop.list(System.out);
             echo "Hello World"
@@ -81,7 +81,7 @@ pipeline {
 
 
              def fileJson = workspace+'/'+file+'.json'
-             def json = readFile(file:'/var/lib/jenkins/workspace/Test_MQ/Test_MQ.json')
+             def json = readFile(file: $WORKSPACE+'/Test_MQ.json')
              def data = new JsonSlurperClassic().parseText(json)
              echo " Pass: ${pass}"
               data.pipelineConfig.configuration[12].value[0].value = "amqp://172.22.52.227"
