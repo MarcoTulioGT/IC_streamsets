@@ -56,10 +56,10 @@ pipeline {
             echo "pMQPassword:  ${prop.getProperty("pMQPassword")}"
             pass = prop.getProperty("pMQPassword")
             
-             emptyMap = new HashMap(prop);
-             emptyMap.each { entry ->
-             println "Name: $entry.key Age: $entry.value"
-             }
+             //emptyMap = new HashMap(prop);
+             //emptyMap.each { entry ->
+             //println "Name: $entry.key Age: $entry.value"
+            // }
             
 
             //echo "pMQQueue:  ${properties.pMQQueue}"
