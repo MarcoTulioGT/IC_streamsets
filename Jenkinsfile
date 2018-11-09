@@ -29,7 +29,7 @@ pipeline {
 	def file= 'Test_MQ'
     def workspace = pwd()
     def pass = ''
-    def emptyMap = [:]
+    //def emptyMap = [:]
 
 }
     stages {
