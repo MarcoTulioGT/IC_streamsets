@@ -123,7 +123,7 @@ pipeline {
                     script {	
                 echo 'Iniciando Pipeline ' 
                 
-               	sh 'curl -X POST http://172.22.37.20:18630/rest/v1/pipeline/'+pipelineName+'/start?rev=0 --user "rbarriost:Tigo2018" --header "Content-Type:application/json" --header "X-Requested-By:SDC" --header "X-SS-REST-CALL:true"  --data-binary "{"pMQHost": "amqp://172.22.52.227","pMQQueue": "V1CONHED","pMQUser": "guest","pMQPassword":"guest"}"'
+               	sh 'curl -X POST http://172.22.37.18:18630/rest/v1/pipeline/'+pipelineName+'/start?rev=0 --user "rbarriost:Tigo2018" --header "Content-Type:application/json" --header "X-Requested-By:SDC" --header "X-SS-REST-CALL:true"  --data-binary "{"pMQHost": "amqp://172.22.52.227","pMQQueue": "V1CONHED","pMQUser": "guest","pMQPassword":"guest"}"'
                    		}
             }
         }
